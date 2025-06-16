@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --light: #f9f0e8; /* Subtle ivory */
+  --dark: #605e5e; /* Rich dark text */
+  --primary: #e8c873; /* Warm gold for highlights */
+  --font-sans: "Poppins", sans-serif;
 }
-
-@theme inline {
+html.dark {
+  --bg-color: #f9f0e8;
+  --text-color: #605e5e;
+}
+html.light {
+  --bg-color: #605e5e;
+  --text-color: #f9f0e8;
+}
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  color: var(--color-foreground);
+  font-family: "Droid Serif W01 Regular", serif;
+  -webkit-font-smoothing: antialiased;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-origin: padding-box;
+}
+.bg-light {
+  background-color: var(--light);
+}
+.bg-dark {
+  background-color: var(--dark);
+}
+.bg-primaryDark {
+  background-color: var(--primaryDark);
+}
+
+/* Text Utilities */
+.text-light {
+  color: var(--light);
+}
+.text-dark {
+  color: var(--dark);
+}
+.text-primaryDark {
+  color: var(--primaryDark);
 }
