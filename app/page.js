@@ -1,14 +1,15 @@
 import HeroSection from "@/component/HeroSection";
 
-import heroImage from "../public/images/heroImage.jpg"
+import heroImage from "../public/images/heroImage.jpg";
 import React from "react";
 import Image from "next/image";
+import Text from "@/component/Text";
+import { homeContent } from "../data/textObject";
 const Home = () => {
   return (
     <main className="bg-">
-    
       <Image src={heroImage} alt="bg" width={1000} height={1000} />
-      <div>
+      {/* <div>
         <h2 className="text-dark">LITTLE SPOTLIGHT ON US</h2>
         <h3>why we are the talk of the town?</h3>
         <p>
@@ -21,8 +22,9 @@ const Home = () => {
           to be nothing short of extraordinary.
         </p>
 
-      </div>
-      <HeroSection />
+      </div> */}
+      <Text data={homeContent} headingSize="text-6xl" fontStyle="font-light"/>
+      {/* <HeroSection /> */}
     </main>
   );
 };
